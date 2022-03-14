@@ -187,7 +187,7 @@ public class PixelColor extends Color {
 
     /**
      * Generates the corresponding color with the supplied green value
-     * @param green value of the red color
+     * @param green value of the green color
      * @return The Corresponding color
      */
     public Color withGreen(int green){
@@ -196,7 +196,7 @@ public class PixelColor extends Color {
 
     /**
      * Generates the corresponding color with the supplied blue value
-     * @param blue value of the red color
+     * @param blue value of the blue color
      * @return The Corresponding color
      */
     public Color withBlue(int blue){
