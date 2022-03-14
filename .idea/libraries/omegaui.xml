@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="omegaui">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/omegaui.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
