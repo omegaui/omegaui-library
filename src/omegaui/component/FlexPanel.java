@@ -77,7 +77,7 @@ public class FlexPanel extends JComponent{
 	}
 	
 	@Override
-	public void paint(Graphics graphics){
+	public void paintComponent(Graphics graphics){
 		if(paintGradientEnabled)
 			setGradient();
 		Graphics2D g = (Graphics2D)graphics;
@@ -93,6 +93,6 @@ public class FlexPanel extends JComponent{
 			g.setColor(borderColor);
 			g.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, arcX, arcY);
 		}
-		super.paint(g);
+		super.paintComponent(g);
 	}
 }

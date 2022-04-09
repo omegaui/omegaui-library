@@ -1,20 +1,20 @@
 /**
-* Round Text Field with Decorations
-* Copyright (C) 2021 Omega UI
+ * Round Text Field with Decorations
+ * Copyright (C) 2021 Omega UI
 
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 3 of the License, or
-* (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
 
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
 
-* You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 package omegaui.component;
 import java.awt.geom.RoundRectangle2D;
@@ -39,6 +39,7 @@ public class RTextField extends JTextField{
 	private Color color1;
 	private Color color2;
 	private Color color3;
+
 	public RTextField(String hint, String pressHint, Color color1, Color color2, Color color3){
 		this.hint = hint;
 		this.pressHint = pressHint;
@@ -64,18 +65,22 @@ public class RTextField extends JTextField{
 			}
 		});
 	}
+	
 	public void setHint(String hint) {
 		this.hint = hint;
 		repaint();
 	}
+	
 	public void setPressHint(String pressHint) {
 		this.pressHint = pressHint;
 		repaint();
 	}
+	
 	public void setArc(int x, int y){
 		this.arcX = x;
 		this.arcY = y;
 	}
+	
 	public void setColors(Color c1, Color c2, Color c3){
 		this.color1 = c1;
 		this.color2 = c2;
@@ -83,6 +88,7 @@ public class RTextField extends JTextField{
 		setBackground(color2);
 		setForeground(color3);
 	}
+	
 	protected void paintComponent(Graphics g) {
 		g.setColor(getBackground());
 		g.fillRoundRect(0, 0, getWidth() - 1, getHeight() - 1, arcX, arcY);
@@ -99,20 +105,23 @@ public class RTextField extends JTextField{
 			g2d.dispose();
 		}
 	}
+	
 	public boolean hasText(){
 		return !(getText().equals(hint) || getText().equals(pressHint) || getText().equals(""));
 	}
+	
 	protected void paintBorder(Graphics g) {
 		g.setColor(!getText().equals(hint) ? getForeground() : color1);
 		g.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, arcX, arcY);
 	}
+	
 	public boolean contains(int x, int y) {
 		if (shape == null || !shape.getBounds().equals(getBounds())) {
 			shape = new RoundRectangle2D.Float(0, 0, getWidth() - 1, getHeight() - 1, arcX, arcY);
 		}
 		return shape.contains(x, y);
 	}
-	
+
 	@Override
 	public void setText(String text){
 		super.setText(text);
