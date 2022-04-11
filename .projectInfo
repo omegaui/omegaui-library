@@ -1,8 +1,6 @@
 >JDK Path
--
+-/usr/lib/jvm/jdk-17
 >Main Class
--test.CaretFieldTest
+-test.UBRDTest
 >Language Tag
 -0
->Opened Editors on Main Tab Panel
--project-root$/src/omegaui/component/UBRFrame.java
