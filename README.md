@@ -48,4 +48,6 @@ See [omegaide](https://github.com/omegaui/omegaide)
 
 It's entirely built around with omegaui-library.
 
+# Updates
+### Since this library is a part of omegaide, so updates arrive faster there than on this repo.
 
