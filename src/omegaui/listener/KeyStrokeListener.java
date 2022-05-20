@@ -1,6 +1,6 @@
-/**
+/*
  * The IDE 's Key Input Listener
- * Copyright (C) 2021 Omega UI
+ * Copyright (C) 2022 Omega UI
 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,9 +38,13 @@ public class KeyStrokeListener implements KeyListener{
 		c.addFocusListener(new FocusAdapter(){
 			@Override
 			public void focusLost(FocusEvent e){
-				keyStrokes.forEach(keyStrokeData->keyStrokeData.autoReset());
+				resetAll();
 			}
 		});
+	}
+
+	public void resetAll(){
+		keyStrokes.forEach(keyStrokeData->keyStrokeData.autoReset());
 	}
 
 	public KeyStrokeData putKeyStroke(KeyStrokeDataListener listener, int... key){

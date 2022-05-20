@@ -1,5 +1,5 @@
 /*
- * ToggleListener
+ * The Resize Listener
  * Copyright (C) 2022 Omega UI
 
  * This program is free software: you can redistribute it and/or modify
@@ -16,8 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package omegaui.component.listener;
-public interface ToggleListener {
-	void toggle(boolean status);
-}
+package omegaui.listener;
+import java.util.LinkedList;
 
+import javax.swing.JComponent;
+public interface BoundsListener {
+	void onLayout(JComponent c);
+}
